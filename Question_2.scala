@@ -20,7 +20,7 @@ class Question_2 {
         }).toList
 
         // Returning the created list of player objects
-        return players
+        players
     }
 
     def displayPlayerDetails(playerobjects: List[Player]): Unit = {
@@ -28,8 +28,7 @@ class Question_2 {
 
         // For loop for traversing through the objects in the list
         for (playerobject <- playerobjects) {
-            println(s" s.no : $count \n Name : ${playerobject.Name}\n County : ${playerobject.Country} \n Year : ${playerobject.Year} \n Runs : ${playerobject.Runs}\n Matches : ${playerobject.Matches} \n Wickets : ${playerobject.Wickets}")
-            //            println("S.NO : " + count + "\nName : " + playerobject.Name + "\nCounty : " + playerobject.Country + "\nYear : " + playerobject.Year + "\nRuns : " + playerobject.Runs + "\nMatches : " + playerobject.Matches + "\nWickets : " + playerobject.Wickets)
+            println(s" s.no : $count , Name : ${playerobject.Name}, County : ${playerobject.Country} , Year : ${playerobject.Year} , Runs : ${playerobject.Runs}, Matches : ${playerobject.Matches} , Wickets : ${playerobject.Wickets}")
             println()
             count = count + 1 // Incrementing the counter for serial NO
         }
@@ -41,7 +40,7 @@ class Question_2 {
         // For loop for traversing through the objects in the list
         for (playerobject <- playerobjects) {
             // Printing the data in the object
-            println(s" Name : ${playerobject.Name}\n Rank : ${count}\n County : ${playerobject.Country} \n Year : ${playerobject.Year} \n Runs : ${playerobject.Runs}\n Matches : ${playerobject.Matches} \n Wickets : ${playerobject.Wickets}\n Performance :${5 * playerobject.Wickets + 0.05 * playerobject.Runs}")
+            println(s" Name : ${playerobject.Name}, Rank : ${count}, County : ${playerobject.Country}, Year : ${playerobject.Year}, Runs : ${playerobject.Runs}, Matches : ${playerobject.Matches}, Wickets : ${playerobject.Wickets}, Performance :${5 * playerobject.Wickets + 0.05 * playerobject.Runs}")
             count += 1 // Incrementing the counter for serial NO
             println()
         }
@@ -51,7 +50,6 @@ class Question_2 {
 
 // Creating object Question_2
 object Question_2 {
-
 
     def main(args: Array[String]): Unit = {
         val question2_obj = new Question_2() // Creation of Object

@@ -14,17 +14,16 @@ class Question_1() {
 
         //         If the value of the last two digits after the decimal point is greater than or equal to 50,
         //         then the bucket range is from `n - (last two digits/1000) + 0.050 to n + (99 - last two digits)/1000`.
-        if (last_two_digits.toDouble >= 50) {
-            val left_limit= item - (last_two_digits.toDouble / 1000) + 0.050 // Calculating and Storing the left_limit
-            val right_limit = item + (99 - last_two_digits.toDouble) / 1000 // Calculating and Storing the right_limit
+        if (last_two_digits>= 50) {
+            val left_limit= item - (last_two_digits/ 1000) + 0.050 // Calculating and Storing the left_limit
+            val right_limit = item + (99 - last_two_digits) / 1000 // Calculating and Storing the right_limit
             print(f" Bucket : $left_limit%,.3f" + " - " + f"$right_limit%,.3f\n") // Printing the fetched limits
-            //            print(s"Bucket:${left_limit.toDouble} - ${right_limit.toDouble} \n")
-        }
+             }
 
-        //        Otherwise, the bucket range is from `n - (last two digits/1000) to n + (49 - last two digits)/1000`.
+        //  Otherwise, the bucket range is from `n - (last two digits/1000) to n + (49 - last two digits)/1000`.
         else {
-            val left_limit = item - (last_two_digits.toDouble / 1000) // Calculating and Storing the left_limit
-            val right_limit = item + (49 - last_two_digits.toDouble) / 1000 // Calculating and Storing  the right_limit
+            val left_limit = item - (last_two_digits / 1000) // Calculating and Storing the left_limit
+            val right_limit = item + (49 - last_two_digits) / 1000 // Calculating and Storing  the right_limit
             print(f" Bucket : $left_limit%,.3f" + " - " + f"$right_limit%,.3f\n") // Printing the bucket
 
         }
